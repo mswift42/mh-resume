@@ -1,9 +1,11 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
-<link rel="import" href="../screen-shot/screen-shot.html">"
+<link rel="import" href="../screen-shot/screen-shot.html">
+<link rel="import" href="../project-header/project-header.html">
 
-<polymer-element name="notable-project" attributes="project thumbnail url">
+<polymer-element name="notable-project" attributes="projecttitle thumbnail url">
   <template>
       <link rel="stylesheet" href="notable-project.css">
+      <project-header projecttitle="{{projecttitle}}" url="{{url}}" reponame="Github Link"></project-header>
       <screen-shot></screen-shot>
 
   </template>
