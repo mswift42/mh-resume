@@ -1,0 +1,25 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<polymer-element name="project-header" attributes="projecttitle url reponame">
+  <template>
+      <link rel="stylesheet" href="project-header.css">
+      <div layout horizontal>
+    <div id="projheader">
+        <h3>{{projecttitle}}</h3>
+    </div>
+    <div id="projlink">
+        <a href="{{url}}">{{reponame}}</a>
+    </div>
+      </div>
+  </template>
+  <script>
+    (function () {
+      'use strict';
+
+      Polymer({
+        // define element prototype here
+      });
+
+    })();
+  </script>
+</polymer-element>
