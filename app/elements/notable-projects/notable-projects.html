@@ -1,0 +1,42 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../notable-project/notable-project.html">
+
+<polymer-element name="notable-projects" attributes="projects proj">
+  <template>
+      <link rel="stylesheet" href="notable-projects.css">
+      <template repeat="{{proj in projects}}">
+          <notable-project projecttitle={{proj.name}} projdesc={{proj.summary}}
+                           url={{proj.url}} thumbnail={{proj.pic}}>
+      </notable-project>
+      </template>
+  </template>
+  <script>
+    (function () {
+      'use strict';
+
+        Polymer({
+            projects :  [
+                {"name":"MetalHead",
+                 "url" : "https://github.com/mswift42/MetalHead",
+                 "pic" : "../../images/mh1.png",
+                 "summary": "MetalHead is a old school text adventure written in Common Lisp. Every location and items in MetalHead's game world are instances of CLOS class definitions `loc` and `item`, which are inspired by infocom's Zork Implementation Language.The goal of the game is to attend a Metallica concert. This can be achieved by interacting in typical text adventure manner with items and people."
+                },
+                {"name":"Emacs Theme Creator",
+                 "url": "https://github.com/mswift42/theme-creator",
+                 "pic" : "../../images/screen1.png",
+                 "summary": "Emacs Theme Creator helps you to create quickly color themes for Emacs24. It runs an Google's AppEngine, using Go as backend. The frontend uses AngularJS, because Emacs Theme Creator makes heavy use of two-way data binding, which is very easy to implement in AngularJS. Random colors are supported by using go-colorful's 3 palettes, soft, warm and happy, and the contrast can be adjusted using the chroma javascript library."
+                },
+                {"name":"Beebster",
+                 "url": "https://github.com/mswift42/go-beebster",
+                 "pic" : "../../images/pic1.png",
+                 "summary": "go-beebster is a Web Gui frontend for {\href{https://github.com/get-iplayer/get\_iplayer}{get-iplayer}}. You can search for Iplayer programmes, either by name or category, see their description and download the programme. Beebster is implemented in Go, running the command line application get-iplayer in the background to search for the desired programme and info using regular expressions. It displays the results in the browser, showing a thumbnail and the programme's title. Downloading opens a gnome-terminal running the get-iplayer download command."
+                    }
+            ]
+
+
+        // define element prototype here
+      });
+
+    })();
+  </script>
+</polymer-element>
