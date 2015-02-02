@@ -1,10 +1,10 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
-<polymer-element name="screen-shot" attributes="">
+<polymer-element name="screen-shot" attributes="thumbnail">
   <template>
       <link rel="stylesheet" href="screen-shot.css">
       <div id="imagecontainer">
-          <img id="pic1" src="../../images/pic1.png">
+          <img id="pic1" src={{thumbnail}}>
 </div>
   </template>
   <script>
