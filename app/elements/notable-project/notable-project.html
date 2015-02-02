@@ -2,21 +2,28 @@
 <link rel="import" href="../screen-shot/screen-shot.html">
 <link rel="import" href="../project-header/project-header.html">
 
-<polymer-element name="notable-project" attributes="projecttitle thumbnail url">
-  <template>
-      <link rel="stylesheet" href="notable-project.css">
-      <project-header projecttitle="{{projecttitle}}" url="{{url}}" reponame="Github Link"></project-header>
-      <screen-shot></screen-shot>
+<polymer-element name="notable-project" attributes="projecttitle thumbnail url projdesc">
+    <template>
+        <link rel="stylesheet" href="notable-project.css">
+        <div id="notproj" center>
+            <div id="headerdiv">
+                <project-header projecttitle="{{projecttitle}}" url="{{url}}" reponame="Github Link"></project-header>
+            </div>
+            <screen-shot thumbnail="{{thumbnail}}"></screen-shot>
+            <div id="projdecsection" center>
+                <short-projdesc projdesc="{{projdesc}}"><p>{{projdesc}}</p></short-projdesc>
+            </div>
+        </div>
 
-  </template>
-  <script>
-    (function () {
-      'use strict';
+    </template>
+    <script>
+     (function () {
+         'use strict';
 
-      Polymer({
-        // define element prototype here
-      });
+         Polymer({
+             // define element prototype here
+         });
 
-    })();
-  </script>
+     })();
+    </script>
 </polymer-element>
