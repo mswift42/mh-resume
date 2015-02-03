@@ -1,0 +1,44 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../work-experience/work-experience.html">
+
+<polymer-element name="work-experiences" attributes="company years position worksummary">
+  <template>
+      <link rel="stylesheet" href="work-experiences.css">
+      <h2>Work Experience</h2>
+      <template repeat="{{exp in workexps}}">
+          <work-experience company={{exp.company}} years={{exp.years}}
+                            position={{exp.position}} worksummary={{exp.worksummary}}>
+          </work-experience>
+      </template>
+  </template>
+  <script>
+    (function () {
+      'use strict';
+
+      Polymer({
+          // define element prototype here
+          workexps : [
+              {
+                  "company" : "Pfeiffer & May",
+                  "years" : "2008 - 2012",
+                  "position" : "Head of Heating Department",
+                  "worksummary": "Supervising of team members. Negotiating prices and special deals with suppliers and customers. Developing weekly promotions for heating products. Determining of prices and conditions for our supplying of goods for bigger projects. Training and teaching of apprentices. Marketing of products utilising renewable energy. Compiling annual reports and goals for the following year."
+              },
+              {
+                  "company" : "Pfeiffer & May",
+                  "years"  : "1998 - 2006",
+                  "position" : "Sales Team",
+                  "worksummary" : "Supervising of team members. Handling of the demanding clients. Taking orders from our clients for daily deliveries. Making quick offers. Handling of complaints. Ordering of unusual products with our suppliers. Training and teaching of apprentices. Managing export business with customer in Taiwan, including handling of payment via letter of credit. Taking orders from our clients for daily or special deliveries. Inquiring of delivery dates. Handling of complaints. Ordering of goods with our suppliers by fax or telephone. Giving technical advise to our customers."
+              },
+              {
+                  "company" : "Pfeiffer & May",
+                  "years" : "1995 - 1998",
+                  "position" : "Apprenticeship",
+                  "worksummary" : "Apprenticeship with Pfeiffer & May. Graduated as Wholesale and Foreign Trade merchant."
+              }
+          ]
+      });
+
+    })();
+  </script>
+</polymer-element>
