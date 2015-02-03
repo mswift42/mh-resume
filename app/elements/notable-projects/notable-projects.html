@@ -4,6 +4,7 @@
 <polymer-element name="notable-projects" attributes="projects proj">
   <template>
       <link rel="stylesheet" href="notable-projects.css">
+      <h2 >Personal Projects</h2>
       <template repeat="{{proj in projects}}">
           <notable-project projecttitle={{proj.name}} projdesc={{proj.summary}}
                            url={{proj.url}} thumbnail={{proj.pic}}>
@@ -21,7 +22,7 @@
                  "pic" : "../../images/mh1.png",
                  "summary": "MetalHead is a old school text adventure written in Common Lisp. Every location and items in MetalHead's game world are instances of CLOS class definitions `loc` and `item`, which are inspired by infocom's Zork Implementation Language.The goal of the game is to attend a Metallica concert. This can be achieved by interacting in typical text adventure manner with items and people."
                 },
-                {"name":"Emacs Theme Creator",
+                {"name":"Theme Creator",
                  "url": "https://github.com/mswift42/theme-creator",
                  "pic" : "../../images/screen1.png",
                  "summary": "Emacs Theme Creator helps you to create quickly color themes for Emacs24. It runs an Google's AppEngine, using Go as backend. The frontend uses AngularJS, because Emacs Theme Creator makes heavy use of two-way data binding, which is very easy to implement in AngularJS. Random colors are supported by using go-colorful's 3 palettes, soft, warm and happy, and the contrast can be adjusted using the chroma javascript library."
