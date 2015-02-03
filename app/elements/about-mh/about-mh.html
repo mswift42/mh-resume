@@ -1,15 +1,19 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
-<polymer-element name="about-mh" attributes="">
+<polymer-element name="about-mh" attributes="about">
   <template>
-    <link rel="stylesheet" href="about-mh.css">
+      <link rel="stylesheet" href="about-mh.css">
+      <h2 class="aboutheader">About</h2>
+        <p>{{about}}</p>
   </template>
+
   <script>
     (function () {
       'use strict';
 
       Polymer({
-        // define element prototype here
+          // define element prototype here
+          about: "Martin Haesler is a former sales man for plumbing and heating projects, who after 17 years of working in this line of work, decided it was time for a change, see something of the world, and try for a completely different career path. Having always been interested in computer technology, an avid Linux user for many years, he decided on programming as a new career. Martin Haesler is quick to learn new things, self motivated and eager to improve."
       });
 
     })();
