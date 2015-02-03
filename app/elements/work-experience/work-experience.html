@@ -1,15 +1,34 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
-<polymer-element name="work-experience" attributes="">
+<polymer-element name="work-experience" attributes="company years position worksummary">
   <template>
-    <link rel="stylesheet" href="work-experience.css">
+      <link rel="stylesheet" href="work-experience.css">
+      <div id="workexpcontainer" vertical layout>
+          <div id="companyposition" horizontal layout>
+              <div id="company">
+                  <h2>{{company}}</h2>
+              </div>
+              <div id="postion">
+                  <h2>{{postion}}</h2>
+              </div>
+          </div>
+          <div id="yearssummary" horizontal layout>
+              <div id="years">
+                  <p>{{years}}</p>
+              </div>
+              <div id="summary" flex>
+                  <p>{{summary}}</p>
+              </div>
+          </div>
+      </div>
   </template>
   <script>
     (function () {
       'use strict';
 
       Polymer({
-        // define element prototype here
+          // define element prototype here
+
       });
 
     })();
