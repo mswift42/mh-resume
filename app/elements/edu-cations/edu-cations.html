@@ -1,0 +1,37 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../edu-cation/edu-cation.html">
+
+<polymer-element name="edu-cations" attributes="">
+  <template>
+      <link rel="stylesheet" href="edu-cations.css">
+      <h2 id="education">Education</h2>
+      <template repeat="{{school in schools}}">
+          <edu-cation years="{{school.years}}" schoolname="{{school.schoolname}}">
+          </edu-cation>
+      </template>
+  </template>
+  <script>
+    (function () {
+      'use strict';
+
+      Polymer({
+          // define element prototype here
+          schools : [
+              {
+                  "years" : "1993 - 1995",
+                  "schoolname" : "Berufskolleg II, Villingen-Schwenningen"
+              },
+              {
+                  "years" : "1984 - 1993",
+                  "schoolname" : "Gymnasium, Villingen-Schwenningen"
+              },
+              {
+                  "years" : "1980 - 1984",
+                  "schoolname" : "Elementary School, Villingen-Schwenningen"
+              }
+          ]
+      });
+
+    })();
+  </script>
+</polymer-element>
