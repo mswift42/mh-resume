@@ -1,8 +1,16 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
-<polymer-element name="edu-cation" attributes="">
+<polymer-element name="edu-cation" attributes="years schoolname">
   <template>
-    <link rel="stylesheet" href="edu-cation.css">
+      <link rel="stylesheet" href="edu-cation.css">
+      <div id="educontainer" horizontal layout>
+          <div id="years" flex two>
+              <h3>{{years}}</h3>
+          </div>
+          <div id="school" flex four>
+              <h3>{{schoolname}}</h3>
+          </div>
+      </div>
   </template>
   <script>
     (function () {
