@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+          <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>work-exp-test</title>
+
+  <script src="../bower_components/webcomponentsjs/webcomponents.js"></script>
+  <link rel="import"
+    href="../bower_components/polymer-test-tools/tools.html">
+  <script src="../bower_components/polymer-test-tools/htmltest.js">
+  </script>
+
+  <!-- Step 1: import the element to test -->
+  <link rel="import" href="../elements/work-experiences/work-experiences.html">
+
+</head>
+<body>
+
+    <work-experiences></work-experiences>
+
+  <script>
+
+    document.addEventListener('polymer-ready', function() {
+      var el = document.querySelector('work-experiences');
+      var header = el.shadowRoot.querySelector('h2');
+        assert.equal(header.textContent, 'Work Experience');
+        var workexp = el.shadowRoot.querySelector('work-experience');
+        assert.isDefined(workexp);
+        var h3 = workexp.shadowRoot.querySelector('h3');
+        assert.equal(h3.textContent,'Pfeiffer & May');
+
+      // IMPORTANT:
+      // Make sure to call done() at the end of every test suite!
+      done();
+    });
+
+  </script>
+
+</body>
+
+
+</html>
