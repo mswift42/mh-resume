@@ -1,8 +1,11 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
-<polymer-element name="technical-skill" attributes="">
+<polymer-element name="technical-skill" attributes="skill">
   <template>
-    <link rel="stylesheet" href="technical-skill.css">
+      <link rel="stylesheet" href="technical-skill.css">
+      <div id="skillcontainer">
+          <span>{{skill}}</span>
+      </div>
   </template>
   <script>
     (function () {
