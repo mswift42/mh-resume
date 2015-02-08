@@ -6,14 +6,17 @@
       <link rel="stylesheet" href="technical-skills.css">
       <h2 id="skillheader">Technical Skills</h2>
       <template repeat="{{s in skills}}">
-          <div id="skillscontainer" horizontal layout>
-              <div class="header" flex two>
+          <div vertical layout>
+          <div id="skillscontainer" horizontal layout around-justified>
+              <div class="header" flex self-start>
                   <h3>{{s.subsection}}</h3>
               </div>
-              <div class="skills" flex four>
+              <div class="skills" flex >
               <template repeat="{{l in s.skill}}">
                   <span>{{l}}</span>
               </template>
+              <br/><br/>
+              </div>
               </div>
           </div>
       </template>
