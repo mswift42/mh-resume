@@ -1,13 +1,18 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/core-icons/core-icons.html">
 <link rel="import" href="../../bower_components/core-item/core-item.html">
+<link rel="import" href="../../bower_components/paper-shadow/paper-shadow.html">
 
 <polymer-element name="contact-element" attributes="">
   <template>
-      <link rel="stylesheet" href="contact-element.css">
-      <div layout vertical center>
-      <div class="contactcontainer" layout vertical >
-          <div class="header" self-center>
+    <link rel="stylesheet" href="contact-element.css">
+    
+    <div layout vertical center>
+      <paper-shadow z="1" id="contactcard">
+        <div class="contactcontainer" layout vertical >
+
+        <div class="header" self-center>
+
           <h2 >Martin Haesler</h2>
           </div>
           <div class="email" layout horizontal>
@@ -19,7 +24,9 @@
               <core-item icon="settings-phone" label="07858 242169" flex self-start>
               </core-item>
           </div>
-      </div>
+          </div>
+    </div>
+    <paper-shadow z="1" id="contactcard">
       </div>
   </template>
   <script>
