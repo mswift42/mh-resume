@@ -1,18 +1,9 @@
-$projectbg:#ffffff;
-$projectbordercolor:#e2e2e2;
+$projectbg:#fafafa;
 
 :host {
     display: block;
-    background-color:$projectbg;
     padding:10px;
     margin:1em;
-    border-radius:6px 6px 6px 6px;
-    border-style:solid;
-    border-color:$projectbordercolor;
-    border-width:0.8px;
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.11);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.11);
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.11);
 
 }
 #headerdiv {
@@ -29,4 +20,8 @@ $projectbordercolor:#e2e2e2;
     margin:auto;
     text-align:center;
 
+}
+
+paper-shadow {
+    background-color:$projectbg;
 }

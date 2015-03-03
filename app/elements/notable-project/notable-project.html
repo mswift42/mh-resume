@@ -1,10 +1,11 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../screen-shot/screen-shot.html">
 <link rel="import" href="../project-header/project-header.html">
-
+<link rel="import" href="../../bower_components/paper-shadow/paper-shadow.html">
 <polymer-element name="notable-project" attributes="projecttitle thumbnail url projdesc">
     <template>
-        <link rel="stylesheet" href="notable-project.css">
+      <link rel="stylesheet" href="notable-project.css">
+     <paper-shadow z="1" >
         <div id="projcontainer" >
             <div vertical layout flex >
                 <div id="headerdiv" flex six>
@@ -18,7 +19,7 @@
                 <screen-shot thumbnail="{{thumbnail}}"></screen-shot>
             </div>
         </div>
-
+     </paper-shadow>
 
 
     </template>
