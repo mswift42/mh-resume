@@ -5,6 +5,7 @@ $sectiongap:1vh;
 
 @mixin section-heading {
     text-align:center;
+    margin:0 auto;
     padding:2em;
     background-color:$sectionbg;
 }
