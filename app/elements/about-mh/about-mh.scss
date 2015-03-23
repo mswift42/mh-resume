@@ -1,12 +1,20 @@
+@import '../../styles/main.scss';
+
 :host {
     display: block;
     margin:auto;
-    width:90%;
-    line-height:180%;
+    width:100%;
+    line-height:200%;;
     text-align:center;
     padding:24px;
+    background-color:$sectionbg;
+    margin-top:2vh;
 }
-paper-shadow {
-    background-color:#fafafa;
-    padding:3px;
+
+
+.aboutcontainer {
+    width:90%;
+}
+
+.aboutcontainer > p {
 }
