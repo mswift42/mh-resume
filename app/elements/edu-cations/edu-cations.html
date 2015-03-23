@@ -3,8 +3,10 @@
 
 <polymer-element name="edu-cations" attributes="">
   <template>
-      <link rel="stylesheet" href="edu-cations.css">
+    <link rel="stylesheet" href="edu-cations.css">
+    <div class="sectionheader">
       <h2 id="education">Education</h2>
+    </div>
       <template repeat="{{school in schools}}">
           <edu-cation years="{{school.years}}" schoolname="{{school.schoolname}}">
           </edu-cation>
