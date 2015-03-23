@@ -1,12 +1,26 @@
+@import '../../styles/_base.scss';
+
 :host {
     display: block;
-    width:95%;
+    margin-top:2vh;
+
+}
+.awards {
+    background-color:$sectionbg;
+    margin-top:2vh;
     padding:2em;
+    
+}
+
+.awardheader {
+    @include section-heading;
 }
 .awarddescription {
+    text-align:center;
     margin-top:1.2em;
 }
 
-.awardtitle > span {
-    font-weight: bold;
+.awardtitle {
+    text-align:center;
+    font-weight:bold;
 }

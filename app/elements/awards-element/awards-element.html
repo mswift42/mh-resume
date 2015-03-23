@@ -1,29 +1,31 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/core-media-query/core-media-query.html">
 
 <polymer-element name="awards-element" attributes="">
   <template>
-      <link rel="stylesheet" href="awards-element.css">
-      <div class="awardscontainer" layout vertical center>
-          <h2>Awards</h2>
-      <div layout horizontal center >
-          <div class="awardtitle" flex >
-              <span>Certificate of Awesome</span>
-          </div>
-          <div class="awarddescription" flex three>
-              <span>Certificate of Awesome, awarded for a notably superior achievement
-                  in the Lisp in Summer Projects 2013 Programming competition.</span>
-          </div>
+    <link rel="stylesheet" href="awards-element.css">
+    <div class="awardheader">
+      <h2>Awards</h2>
+    </div>
+    <div class="awards" >
+      <div class="awardtitle">
+        <h4>Certificate of Awesome</h4>
+      </div>
+      <div class="awarddescription">
+        <span>Certificate of Awesome, awarded for a notably superior achievement
+          in the Lisp in Summer Projects 2013 Programming competition.</span>
       </div>
       </div>
+    </div>
   </template>
   <script>
-    (function () {
-      'use strict';
+   (function () {
+     'use strict';
 
-      Polymer({
-        // define element prototype here
-      });
+     Polymer({
+       // define element prototype here
+     });
 
-    })();
+   })();
   </script>
 </polymer-element>
