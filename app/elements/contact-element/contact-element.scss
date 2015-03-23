@@ -1,16 +1,14 @@
+@import '../../styles/main.scss';
+
+
 :host {
     display: block;
-    height:10em;
-    width:80%;
-    margin-top:1em;
-    margin:auto;
+    width:100%;
+    background:$sectionbg;
     
 }
 
-#contactcard {
-    background-color:rgba(255,255,255,0.6);
-    margin-top:1em;
-}
+
 
 .phone {
     padding:0.2em;
@@ -18,4 +16,32 @@
 
 .email {
     padding:0.2em;
+}
+.contactelement {
+    width:70%;
+    height:auto;
+    margin:0 auto;
+
+}
+.contact {
+    width:90%;
+    height:90%;
+    margin:0 auto;
+}
+
+.contheader {
+    width:80%;
+    margin:0 auto;
+    text-align:center;
+    
+}
+
+.contactname {
+    margin-left:2.8rem;
+    
+}
+.contactname > h2 {
+    margin-top:2em;
+    font-size:100%;
+    font-weight:200;
 }
