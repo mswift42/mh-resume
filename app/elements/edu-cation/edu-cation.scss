@@ -1,4 +1,8 @@
+@import '../../styles/_base.scss';
+
 :host {
     display: block;
     padding:0.4em;
+    background-color:$sectionbg;
+    margin-top:$sectiongap;
 }
