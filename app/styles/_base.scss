@@ -1,0 +1,11 @@
+$bodybg:#333;
+$sectionbg:#fafafa;
+$sectiongap:1vh;
+
+
+@mixin section-heading {
+    text-align:center;
+    padding:2em;
+    background-color:$sectionbg;
+}
+    
