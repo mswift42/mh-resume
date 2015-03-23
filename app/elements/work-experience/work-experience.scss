@@ -1,7 +1,11 @@
+@import '../../styles/_base.scss';
+
 :host {
     display: block;
-
+    margin-top:$sectiongap;
+    background-color:$sectionbg;
 }
 #workexpcontainer {
     padding:0.4em;
+
 }
