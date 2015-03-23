@@ -1,14 +1,14 @@
-$projectbg:#fafafa;
+@import '../../styles/_base.scss';
 
 :host {
     display: block;
-    padding:10px;
-    margin:1em;
+    padding:1em;
+    margin-top:$sectiongap;
+    background-color:$sectionbg;
 
 }
 #headerdiv {
     padding:20px;
-
     margin:auto;
 }
 
@@ -16,12 +16,11 @@ $projectbg:#fafafa;
 
     font-size:1em;
     line-height:140%;
-
     margin:auto;
     text-align:center;
 
 }
 
 paper-shadow {
-    background-color:$projectbg;
+    background-color:$sectionbg;
 }
