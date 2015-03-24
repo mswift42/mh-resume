@@ -1,23 +1,19 @@
+@import '../../styles/_base.scss';
+
 :host {
     display: block;
-     margin:auto;
-    padding:1em;
-    width:90%;
+    margin:auto;
+    margin-top:1vh;
     line-height:300%;
 
     }
 
-h2 {
-    text-align:center;
+#skillheader {
+    @include section-heading;
+    
 }
 
-h3 {
-    margin-top:2em;
-    margin-left:1em;
-    margin-right:1em;
-    font-size:90%;
 
-}
 span {
     padding:0.3em;
     background-color:#526e9c;
@@ -25,5 +21,20 @@ span {
     border-radius:4px;
     }
 #skillheader {
-  padding:2em;
-  }
+    padding:2em;
+    background-color:$sectionbg;
+}
+
+#skillscontainer {
+    background-color:$sectionbg;
+    margin-top:$sectiongap;
+}
+.container {
+    width:95%;
+    height:90%;
+    margin:0 auto;
+    margin-left:1vw;
+}
+div.header {
+    margin-left:1vw;
+}
