@@ -10,20 +10,16 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <!-- build:css styles/main.css -->
+
         <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/tec.css">
         <!-- endbuild-->
 
         <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
         <!-- build:vulcanized elements/elements.vulcanized.html -->
         <link rel="import" href="elements/elements.html">
-
-
-
-
-
         <!-- endbuild-->
     </head>
-
     <body unresolved>
         <core-scaffold>
             <core-header-panel navigation flex mode="seamed">
@@ -38,10 +34,7 @@
                     <core-item icon="assessment" label="Skills"><a href="#skills" target="_self"></a></core-item>
                 </core-menu>
             </core-header-panel>
-
-
         <div tool>Resume</div>
-
             <contact-element id="contact"></contact-element>
             <about-mh id="about"></about-mh>
             <notable-projects id="projects"></notable-projects>
@@ -49,9 +42,7 @@
             <edu-cations id="education"></edu-cations>
             <awards-element id="awards"></awards-element>
             <technical-skills id="skills"></technical-skills>
-
         </core-scaffold>
-            <!-- </core-scaffold> -->
         <!-- build:js scripts/app.js -->
         <script src="scripts/app.js"></script>
         <!-- endbuild-->
