@@ -6,6 +6,11 @@
     margin-top:$sectiongap;
     
 }
+.section-heading > h2{
+
+    @include section-heading;
+}
+
 #education {
     @include section-heading;
 }
