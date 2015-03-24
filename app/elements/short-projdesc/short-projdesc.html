@@ -3,7 +3,6 @@
   <template>
       <link rel="stylesheet" href="short-projdesc.css">
       <div id="shortdesc" center>
-          <p>{{projdesc}}</p>
       </div>
   </template>
   <script>
@@ -12,6 +11,9 @@
 
       Polymer({
         // define element prototype here
+        ready: function() {
+          this.injectBoundHTML(this.projdesc, this.$.shortdesc);
+          }
       });
 
     })();
