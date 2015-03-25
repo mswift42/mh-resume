@@ -1,10 +1,11 @@
 (function(document) {
   'use strict';
 
-  document.addEventListener('polymer-ready', function() {
+  document.addEventListener('click', function() {
     // Perform some behaviour
-    console.log('Polymer is ready to rock!');
-  });
+      var toolbar = document.querySelector('core-scaffold');
+      toolbar.closeDrawer();
+        });
 
 // wrap document so it plays nice with other libraries
 // http://www.polymer-project.org/platform/shadow-dom.html#wrappers
