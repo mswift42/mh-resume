@@ -20,3 +20,8 @@ polyfill-rule {
   color: #000;
   padding: 0.2em 0;
 }
+
+core-pages .core-selected {
+    position: relative;
+    display: block;
+}
