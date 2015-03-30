@@ -24,3 +24,7 @@
 paper-shadow {
     background-color:$sectionbg;
 }
+core-animated-pages .core-selected  {
+    position: relative;
+    display: block;
+}

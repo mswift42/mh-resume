@@ -1,12 +1,17 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../screen-shot/screen-shot.html">
 <link rel="import" href="../project-header/project-header.html">
-<link rel="import" href="../../bower_components/core-icons/core-icons.html">"
+<link rel="import" href="../../bower_components/core-icons/core-icons.html">
+<link rel="import" href="../../bower_components/core-animated-pages/core-animated-pages.html">
+<link rel="import" href="../metalhead-classdesc/metalhead-classdesc.html">
+
 
 
 <polymer-element name="notable-project" attributes="projecttitle thumbnail url projdesc">
     <template>
       <link rel="stylesheet" href="notable-project.css">
+      <core-animated-pages  selected="{{selected}}">
+        <section id="page1">
         <div id="projcontainer" on-tap="{{showProjectInfo}}">
             <div vertical layout flex >
                 <div id="headerdiv" flex six>
@@ -23,11 +28,19 @@
             <div class="nextarrow" horizontal end-justified layout on-tap="{{showDetails}}">
               <core-icon icon="arrow-forward"></core-icon>
             </div>
+        </section>
+        <section id="page2">
+          <metalhead-classdesc></metalhead-classdesc>
+        </section>
 
     </template>
     <script>
      (function () {
        'use strict';
+        document.addEventListener('click', function(e) {
+    var pages = document.querySelector('html /deep/ core-animated-pages');
+          pages.selected = (pages.selected + 1) % pages.children.length;
+  });
          
          Polymer({
            // define element prototype here
@@ -36,3 +49,4 @@
      })();
     </script>
 </polymer-element>
+jn
