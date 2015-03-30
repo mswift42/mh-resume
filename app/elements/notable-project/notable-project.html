@@ -1,12 +1,13 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../screen-shot/screen-shot.html">
 <link rel="import" href="../project-header/project-header.html">
+<link rel="import" href="../../bower_components/core-icons/core-icons.html">"
+
 
 <polymer-element name="notable-project" attributes="projecttitle thumbnail url projdesc">
     <template>
       <link rel="stylesheet" href="notable-project.css">
-
-        <div id="projcontainer" >
+        <div id="projcontainer" on-tap="{{showProjectInfo}}">
             <div vertical layout flex >
                 <div id="headerdiv" flex six>
                     <project-header projecttitle="{{projecttitle}}" url="{{url}}" reponame="Github Link"></project-header>
@@ -19,16 +20,17 @@
                 <screen-shot thumbnail="{{thumbnail}}"></screen-shot>
             </div>
         </div>
-
-
+            <div class="nextarrow" horizontal end-justified layout on-tap="{{showDetails}}">
+              <core-icon icon="arrow-forward"></core-icon>
+            </div>
 
     </template>
     <script>
      (function () {
-         'use strict';
-
+       'use strict';
+         
          Polymer({
-             // define element prototype here
+           // define element prototype here
          });
 
      })();
