@@ -1,8 +1,52 @@
 <link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" "../../bower_components/syntax-highlight/syntax-highlight.html">
 
 <polymer-element name="metalhead-classdesc" attributes="">
   <template>
     <link rel="stylesheet" href="metalhead-classdesc.css">
+    <div class="codesample">
+      <syntax-highlight lang="lisp" theme="default">
+(defclass loc ()
+  ((name :initarg :name :initform '() :reader :name)
+   (fdescription :initarg :fdescription :initform '() :reader :fdescription)
+   (ldescription :initarg :ldescription :initform '() :reader :ldescription)
+   (uexit :initarg :uexit :initform '() :accessor :uexit)
+   (nexit :initarg :nexit :initform '() :accessor :nexit)
+   (cexit :initarg :cexit :initform '() :accessor :cexit)
+   (flags :initarg :flags :initform '() :accessor :flags)
+   (things :initarg :things :initform '() :accessor :things)))
+
+;; Nearly identical to class loc.
+;; synonym stores different synonyms for an object. i.e. synonym for *laptop*
+;; are "laptop" "notebook" "computer", thus program understands take computer.
+;; action describes what can be done with an object. A laptop can be started
+;; picked up, used, ...
+
+(defclass item ()
+  ((name :initarg :name :initform '() :reader :name)
+   (synonym :initarg :synonym :initform '() :reader :synonym)
+   (fdescription :initarg :fdescription :initform '() :reader :fdescription)
+   (ldescription :initarg :ldescription :initform '() :reader :ldescription)
+   (sdescription :initarg :sdescription :initform '() :reader :sdescription)
+   (action :initarg :action :initform '() :accessor :action)
+   (flags :initarg :flags :initform '() :accessor :flags)))
+
+
+(defclass player ()
+  ((location :initarg :location :accessor :location)
+   (inventory :initarg :inventory :initform '() :accessor :inventory))
+  (:documentation "current location of player and list of inventory items."))
+
+(defparameter *intro*
+  '("You wake up. As you are very often wont do, you regret last "
+    "night. It's not that you remember having embarrassed yourself, "
+    "because, frankly, you hardly remember anything of what happened "
+    "after 10 p.m., but you've got one sensational headache, and I'd "
+    "rather not get started talking about the taste in your mouth. "
+    "Slowly, you get up, drink about 4 pints of water and you are "
+        "ready to start the day.~%~%~%"))
+      </syntax-highlight>
+    </div>
   </template>
   <script>
     (function () {
