@@ -4,8 +4,9 @@
 <polymer-element name="metalhead-classdesc" attributes="">
   <template>
     <link rel="stylesheet" href="metalhead-classdesc.css">
+    <link rel="stylesheet" href="../../styles/solarized_dark.css">
     <div class="codesample">
-      <syntax-highlight lang="lisp" theme="default">
+      <pre><code class="lisp">
 (defclass loc ()
   ((name :initarg :name :initform '() :reader :name)
    (fdescription :initarg :fdescription :initform '() :reader :fdescription)
@@ -45,13 +46,17 @@
     "rather not get started talking about the taste in your mouth. "
     "Slowly, you get up, drink about 4 pints of water and you are "
         "ready to start the day.~%~%~%"))
-      </syntax-highlight>
+      </code></pre>
     </div>
   </template>
+  <script src="../../scripts/highlight.pack.js"></script>
   <script>
     (function () {
       Polymer({
         // define element prototype here
+        documentReady: function() {
+          hljs.initHighlightingOnLoad();
+          }
       });
     })();
   </script>
